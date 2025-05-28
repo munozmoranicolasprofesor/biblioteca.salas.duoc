@@ -1,14 +1,11 @@
 package biblioteca.salas.duoc.biblioteca.salas.duoc;
 
 import java.util.Date;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import biblioteca.salas.duoc.biblioteca.salas.duoc.model.Carrera;
@@ -46,7 +43,7 @@ public class DataLoader implements CommandLineRunner{
         Faker faker = new Faker();
         Random random = new Random();
 
-        //limpiar datos antes 
+        //limpiar datos antes
         reservaRepository.deleteAll();
         salaRepository.deleteAll();
         estudianteRepository.deleteAll();
@@ -61,7 +58,7 @@ public class DataLoader implements CommandLineRunner{
             tipoSalaRepository.save(tipoSala);
         } 
         
-        // Generar carreras 
+        // Generar carreras
         for (int i = 0; i < 5; i++) {
             Carrera carrera = new Carrera();
             //carrera.setCodigo(faker.code().asin());
@@ -71,7 +68,7 @@ public class DataLoader implements CommandLineRunner{
 
         List<Carrera> carreras = carreraRepository.findAll();
         
-        // Generar estudiantes 
+        // Generar estudiantes
         for (int i = 0; i < 50; i++) {
 
             Estudiante estudiante = new Estudiante();
@@ -99,7 +96,7 @@ public class DataLoader implements CommandLineRunner{
         List<Estudiante> estudiantes = estudianteRepository.findAll();
         List<Sala> salas = salaRepository.findAll();
         
-        // Generar reservas 
+        // Generar reservas
         for (int i = 0; i < 20; i++) {
             Reserva reserva = new Reserva();
             //reserva.setId(i + 1);
@@ -108,8 +105,8 @@ public class DataLoader implements CommandLineRunner{
             reserva.setFecha_solicitada(new Date());
             reserva.setHora_solicitada(new Date());
             reserva.setHora_cierre(new Date(System.currentTimeMillis() + faker.number().numberBetween(3600000, 7200000))); // 1-2 horas más
-            reserva.setEstado(faker.number().numberBetween(0, 2)); 
-            reservaRepository.save(reserva); 
+            reserva.setEstado(faker.number().numberBetween(0, 2));
+            reservaRepository.save(reserva);
         }
     }
 }
