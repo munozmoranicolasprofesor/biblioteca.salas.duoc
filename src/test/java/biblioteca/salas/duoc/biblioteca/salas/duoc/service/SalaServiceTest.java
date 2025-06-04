@@ -1,4 +1,4 @@
-package biblioteca.salas.duoc.biblioteca.salas.duoc;
+package biblioteca.salas.duoc.biblioteca.salas.duoc.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -17,7 +17,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import biblioteca.salas.duoc.biblioteca.salas.duoc.model.Sala;
 import biblioteca.salas.duoc.biblioteca.salas.duoc.model.TipoSala;
 import biblioteca.salas.duoc.biblioteca.salas.duoc.repository.SalaRepository;
-import biblioteca.salas.duoc.biblioteca.salas.duoc.service.SalaService;
 
 @SpringBootTest
 public class SalaServiceTest {
