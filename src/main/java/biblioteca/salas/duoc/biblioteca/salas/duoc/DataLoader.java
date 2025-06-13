@@ -102,9 +102,9 @@ public class DataLoader implements CommandLineRunner{
             //reserva.setId(i + 1);
             reserva.setEstudiante(estudiantes.get(random.nextInt(estudiantes.size())));
             reserva.setSala(salas.get(random.nextInt(salas.size())));
-            reserva.setFecha_solicitada(new Date());
-            reserva.setHora_solicitada(new Date());
-            reserva.setHora_cierre(new Date(System.currentTimeMillis() + faker.number().numberBetween(3600000, 7200000))); // 1-2 horas más
+            reserva.setFechaSolicitada(new Date());
+            reserva.setHoraSolicitada(new Date());
+            reserva.setHoraCierre(new Date(System.currentTimeMillis() + faker.number().numberBetween(3600000, 7200000))); // 1-2 horas más
             reserva.setEstado(faker.number().numberBetween(0, 2));
             reservaRepository.save(reserva);
         }

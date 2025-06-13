@@ -86,9 +86,9 @@ public class ReservaServiceTest {
         reserva.setId(1);
         reserva.setEstudiante(estudiante);
         reserva.setSala(sala);
-        reserva.setFecha_solicitada(new Date());
-        reserva.setHora_solicitada(new Date());
-        reserva.setHora_cierre(new Date(System.currentTimeMillis() + 3600000)); // +1 hora
+        reserva.setFechaSolicitada(new Date());
+        reserva.setHoraSolicitada(new Date());
+        reserva.setHoraCierre(new Date(System.currentTimeMillis() + 3600000)); // +1 hora
         reserva.setEstado(1);
 
         return reserva;

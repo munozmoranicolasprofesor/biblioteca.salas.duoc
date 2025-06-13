@@ -35,13 +35,13 @@ public class Reserva {
     private Sala sala;
 
     @Column(nullable=false)
-    private Date fecha_solicitada;
+    private Date fechaSolicitada;
 
     @Column(nullable=false)
-    private Date hora_solicitada;
+    private Date horaSolicitada;
         
     @Column(nullable=false)
-    private Date hora_cierre;
+    private Date horaCierre;
 
     @Column(nullable=false)
     private Integer estado;
