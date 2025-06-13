@@ -22,7 +22,6 @@ import biblioteca.salas.duoc.biblioteca.salas.duoc.model.Sala;
 import biblioteca.salas.duoc.biblioteca.salas.duoc.repository.ReservaRepository;
 
 @SpringBootTest
-@ActiveProfiles("test")
 public class ReservaServiceTest {
 
     @InjectMocks
